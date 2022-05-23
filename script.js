@@ -126,7 +126,7 @@ function validarModoFacil() {
       var clickedColor = this.style.backgroundColor
       var pickedColor = document.getElementById("h1").innerHTML
       if (clickedColor == pickedColor) {
-        messageDisplay.textContent = "¡GANASTE! . Intentalo Nuevamente →"
+        messageDisplay.textContent = "¡GANASTE! →"
         boton.textContent = "¡Intenta nuevamente!"
         cambiaColor(clickedColor)
         container.style.background = this.style.background
@@ -143,7 +143,7 @@ function validarModoDificil() {
       var clickedColor = this.style.backgroundColor
       var pickedColor = document.getElementById("h1").innerHTML
       if (clickedColor == pickedColor) {
-        messageDisplay.textContent = "¡GANASTE! . Intentalo Nuevamente →"
+        messageDisplay.textContent = "¡GANASTE! →"
         boton.textContent = "¡Intenta nuevamente!"
         cambiaColor(clickedColor)
         container.style.background = this.style.background
