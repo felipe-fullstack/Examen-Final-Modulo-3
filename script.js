@@ -1,3 +1,14 @@
+var square = document.querySelectorAll("#square");
+var h1 = document.getElementById("h1");
+var element = document.getElementById("primero");
+var elements = document.getElementById("segundo");
+var elements2 = document.getElementById("message");
+var boton = document.getElementById("reset");
+var botonDificil = document.getElementById("hardBtn");
+var btnFacil = document.getElementById("easyBtn");
+var hh = document.getElementById("hh");
+var container = document.getElementById("container");
+var messageDisplay = document.querySelector("#message");
 function rgbAleatorio() {
   var r = Math.floor(Math.random() * 256);
   var g = Math.floor(Math.random() * 256);
@@ -17,6 +28,25 @@ const colors2 = [
   rgbAleatorio(),
   rgbAleatorio(),
 ]
+$(document).ready(function () {
+  botonDificil.style = "visibility: hidden"
+  btnFacil.style = "visibility: hidden"
+  element.style = "visibility: hidden"
+  elements.style = "visibility: hidden"
+});
+boton.addEventListener("click", function () {
+  botonDificil.style = "visibility: visible"
+  btnFacil.style = "visibility: visible"
+  boton.style = "visibility: hidden"
+  hh.style = "visibility: hidden"
+  h1.style = "visibility: visible"
+});
+botonDificil.addEventListener("click", function () {
+  divColorsModoDificil()
+});
+btnFacil.addEventListener("click", function () {
+  divColorsModoFacil()
+});
 function divColorsModoDificil() {
   if (elements2) {
     element.style = "visibility: visible"
@@ -53,31 +83,6 @@ function divColorsModoDificil() {
   square[5].style.backgroundColor = myArray[5];
   h1.textContent = myArray[numeroAleatorio];
 }
-
-var square = document.querySelectorAll("#square");
-var h1 = document.getElementById("h1");
-var element = document.getElementById("primero");
-var elements = document.getElementById("segundo");
-var elements2 = document.getElementById("message");
-var boton = document.getElementById("reset");
-var botonDificil = document.getElementById("hardBtn");
-var btnFacil = document.getElementById("easyBtn");
-var hh = document.getElementById("hh");
-var container = document.getElementById("container");
-
-boton.addEventListener("click", function () {
-  botonDificil.style = "visibility: visible"
-  btnFacil.style = "visibility: visible"
-  boton.style = "visibility: hidden"
-  hh.style = "visibility: hidden"
-  h1.style = "visibility: visible"
-});
-botonDificil.addEventListener("click", function () {
-  divColorsModoDificil()
-});
-btnFacil.addEventListener("click", function () {
-  divColorsModoFacil()
-});
 function removeElementsById() {
   elements.style = "visibility: hidden"
   elements2.innerHTML = ""
@@ -115,14 +120,7 @@ function divColorsModoFacil() {
   square[2].style.backgroundColor = myArray[2];
   h1.textContent = myArray[numeroAleatorio];
 }
-$(document).ready(function () {
-  botonDificil.style = "visibility: hidden"
-  btnFacil.style = "visibility: hidden"
-  element.style = "visibility: hidden"
-  elements.style = "visibility: hidden"
-});
 function validarModoFacil() {
-  var messageDisplay = document.querySelector("#message");
   for (var i = 0; i < square.length; i++) {
     square[i].addEventListener("click", function () {
       var clickedColor = this.style.backgroundColor
@@ -140,7 +138,6 @@ function validarModoFacil() {
   }
 }
 function validarModoDificil() {
-  var messageDisplay = document.querySelector("#message");
   for (var i = 0; i < square.length; i++) {
     square[i].addEventListener("click", function () {
       var clickedColor = this.style.backgroundColor
