@@ -130,7 +130,7 @@ function validarModoFacil() {
       var clickedColor = this.style.backgroundColor
       var pickedColor = h1.innerHTML
       if (clickedColor == pickedColor) {
-        messageDisplay.textContent = "¡VUELVE A INTENTAR! →"
+        messageDisplay.textContent = "¡PLAY AGAIN! →"
         hh.textContent = "¡GANASTE 👍!"
         hh.style = "visibility: visible"
         h1.style = "visibility: hidden"
@@ -150,7 +150,7 @@ function validarModoDificil() {
       var clickedColor = this.style.backgroundColor
       var pickedColor = h1.innerHTML
       if (clickedColor == pickedColor) {
-        messageDisplay.textContent = "¡VUELVE A INTENTAR! →"
+        messageDisplay.textContent = "¡PLAY AGAIN! →"
         hh.textContent = "¡GANASTE 👍!"
         hh.style = "visibility: visible"
         h1.style = "visibility: hidden"
